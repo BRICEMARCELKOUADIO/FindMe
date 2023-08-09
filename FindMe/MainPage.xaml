@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FindMe.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Entry Placeholder="Enter your name" SemanticProperties.Hint="Enter your name to be used when sharing localtion"
+                   HorizontalOptions="Center" x:Name="UsernameEntry" />
+
+            <Button
+                x:Name="FindBtn"
+                Text="Find me"
+                SemanticProperties.Hint="Presents apps available to share your name and location via."
+                Clicked="OnFindMeClicked"
+                HorizontalOptions="Center" />
+            <ActivityIndicator x:Name="isLoading" ></ActivityIndicator>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
